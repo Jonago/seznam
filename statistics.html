@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The list of Initiates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+    <script src="js/shared/angular.min.js"></script>
+    <script src="js/shared/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/shared/angular-filter.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script> -->
+    <!-- <script src="https://code.angularjs.org/1.7.5/angular-animate.js"></script>-->
+</head>
+
+<body ng-app="myApp" ng-controller="MainControllers">
+
+    <div id="navbar" ng-click="show = !show">
+        <div class="container" ng-class="{change: show}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="navbar-title">THE LIST OF INITIATES - Statistics</div>
+    </div>
+    <div class="dropdown fade" ng-if="show" ng-cloak>
+        <div class="dropdown-content">
+            <a href="index.html">The list</a>
+            <a class="active" href="#">Statistics</a>
+            <a href="help.html">Help</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    
+              
+            
+    <!-- Statistics-->
+    <div class="grid-container" ng-cloak>
+    <h2>There are {{text.length}} persons in the list.</h2>
+    <div class="small-2 column end" ng-repeat="y in sray track by $index" style="display: inline-block">
+      <div><strong>{{y}} </strong>  <hr>
+    <p ng-repeat="(key, value) in ordersWithFallback | countBy:y"><strong style="color: orange">{{key}}</strong>: {{value}}, <strong>{{value | percent: text.length : true}}%</strong></p></div>
+    </div>
+    </div>
+    <!-- <hr> -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+<script src="data/list.js"></script>
+<script src="js/apps.js"></script>
+<script src="js/controllers/MainController.js"></script>
+<script src="js/scroolTop.js"></script>
+
+</body>
+</html>

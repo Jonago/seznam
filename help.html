@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The list of Initiates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+    <script src="js/shared/angular.min.js"></script>
+    <script src="js/shared/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/shared/angular-filter.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script> -->
+    <!-- <script src="https://code.angularjs.org/1.7.5/angular-animate.js"></script>-->
+</head>
+
+<body ng-app="myApp" ng-controller="MainControllers">
+    
+    <div id="navbar" ng-click="show = !show">
+        <div class="container" ng-class="{change: show}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="navbar-title">THE LIST OF INITIATES - Help</div>
+    </div>
+    <div class="dropdown fade" ng-if="show" ng-cloak>
+        <div class="dropdown-content">
+            <a href="index.html">The list</a>
+            <a href="statistics.html">Statistics</a>
+            <a class="active" href="#">Help</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+      
+    <div class="grid-container">		
+    <h1>How to search</h1>
+    <p>Each search field describes which element will be searched for. In the <code>All</code> field it is possible to search by all elements (words and numbers).</p>
+    <p>On smaller screens following search fields are omitted (<code>Name</code>, <code>Last Name</code>, <code>Field of endeavour</code> and <code>Country</code>). Instead, <code>All</code> field can be used to search omitted elements.</p>
+    <p>Search is not strict. The more characters is written, the more precise results it will render.</p>
+    <p>While searching with the <code>POD</code> field and when selected one decimal number, results will show also 2nd decimal number with it. For example: when selected <code>1.7</code> it will show also numbers <code>1.75</code> and <code>1.76</code>. But when selected <code>1.75</code> only that result will be shown.</p>
+    <p>When an element in the head of the table is clicked (for example <code>Name</code> or <code>POD</code>) it will sort data by ascended or descended order. The arrow beside element indicate the order. By default the list is sorted by names in ascended order.</p>
+    <p>It is possible to search by multiple search requirements. For example: find all initiates who have 2nd soul ray and 5th mental ray.</p>
+    <p><code>Reset</code> button resets all search fields. This is useful when search fields are overcrowded with data. Wait couple of seconds to reset the fields. Refreshing the browser gives the same result. It is also possible to reset individual field (except for the rays).</p>
+    <p>Number at right bottom side of the form shows all persons in the list, while number in the red circular badge represent number of persons we are searching for.</p>
+    <p>If name contain special character for example: <code>Röntgen</code>, then typing <code>Rontgen</code> will not find him.</p>
+    <br />
+    <h1>Abbreviations</h1>
+    <table rules="groups" role="grid">
+        <thead>
+            <th colspan="2">Abbreviation</th>
+            <th>Meaning</th>
+        </thead>
+        <tbody>
+            <tr>
+            <td>POD</td>
+            <td></td>
+            <td>Point of development</td>
+            </tr>
+            <tr>
+            <td>SR</td>
+            <td></td>
+            <td>Soul ray</td>
+            </tr>
+            <tr>
+            <td>PR</td>
+            <td>P Ray</td>
+            <td>Personality ray</td>
+            </tr>
+            <tr>
+            <td>MR</td>
+            <td>M Ray</td>
+            <td>Mental ray</td>
+            </tr>
+            <tr>
+            <td>AR</td>
+            <td>A Ray</td>
+            <td>Astral ray</td>
+            </tr>
+            <tr>
+            <td>BR</td>
+            <td>B Ray</td>
+            <td>Body ray</td>
+            </tr>
+            <tr>
+            <td>PSR</td>
+            <td>P SRay</td>
+            <td>Personality subray</td>
+            </tr>
+            <tr>
+            <td>MSR</td>
+            <td>M SRay</td>
+            <td>Mental subray</td>
+            </tr>
+            <tr>
+            <td>ASR</td>
+            <td>A SRay</td>
+            <td>Astral subray</td>
+            </tr>
+            <tr>
+            <td>BSR</td>
+            <td>B SRay</td>
+            <td>Body subray</td>
+            </tr>
+            <tr>
+            <td>Mi. name</td>
+            <td></td>
+            <td>Middle name</td>
+            </tr>
+            <tr>
+            <td>FoE</td>
+            <td></td>
+            <td>Field of endeavour</td>
+            </tr>
+            <tr>
+            <td>Rst</td>
+            <td></td>
+            <td>Reset</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+<script src="data/list.js"></script>
+<script src="js/apps.js"></script>
+<script src="js/controllers/MainController.js"></script>
+<script src="js/scroolTop.js"></script>
+
+</body>
+</html>
