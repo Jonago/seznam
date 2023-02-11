@@ -1,0 +1,1 @@
+var app = angular.module("myApp", ["angular.filter", "ngAnimate"]);

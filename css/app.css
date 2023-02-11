@@ -1,0 +1,241 @@
+/* Adds padding to the top in form */
+.grid-padding-x {
+	padding-top:0.5%;
+}
+
+/* Removes margin at the bottom in form */
+.input-group {
+    margin-bottom: 0rem;
+}
+
+/* Nicer visual element 'number of persons' in form */
+.margin-auto {
+	margin: auto;	
+}
+
+/* Vertical line between elements in form */
+.vertical-line {
+	border-right: thin solid #BABABA;
+}
+
+/* Reduces text for POD for bigger screens ... */
+.smaller-text {
+	font-size: 84%;
+}
+
+/* Fills form */
+.fill {
+	background-color: #F2F2F2;
+}
+
+/* Underline text */
+.underline {
+    text-decoration: underline;
+}
+
+/* Removes styles from link */
+a.plain {
+    color: inherit;
+}
+
+/* Adding subtle border to the tables for better viewing */
+table thead,
+table tbody,
+table tfoot {
+    border: 1px solid #D8D8D8;
+}
+
+tfoot {
+    font-size: 70%;
+}
+/* For centering the X in the reset buttons */
+.render-x-correct {
+    width: 15%;
+    height: 39px;
+    padding: 0;
+    text-align: center;  
+}
+
+.render-x-correct-pod-small {
+    width: 25%;
+    height: 39px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    display: -webkit-flex;
+    background-color: #333;
+    padding: 3px 0px 3px 0px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-title {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 130%;
+}
+
+/* Animated Menu icon */
+.container {
+    padding-left: 7px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/*Menu*/
+
+.dropdown.ng-enter-prepare {
+  opacity: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover:not(.active) {background-color: #F1F1F1}
+
+a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* ngAnimate the menu */
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition:0.1s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+    transition:0.1s linear all;
+  opacity:1;
+}
+
+/* now the element will fade out before it is removed from the DOM */
+.fade.ng-leave {
+  transition:0.1s linear all;
+  opacity:1;
+}
+.fade.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+/*Scrool to top button*/
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-image: url(../img/angle_up.svg);
+    filter: invert(1); /* Inverts a colors */
+    -webkit-filter: invert(1); /* Inverts a colors for Safari*/
+    background-size: cover;
+    background-color: #999; /* Set a background color */
+    color: white; /* Text color */
+    /*cursor: pointer; Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    /* font-size: 30px;  Increase font size */
+    height: 50px;
+    width: 50px;
+}
+
+#myBtn:hover {
+    background-color: #CCC; /* Add a dark-grey background on hover */
+}
+
+/*Notification badge*/
+.notification {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/*.notification:hover {
+  background: red;
+}*/
+
+.notification .badge1 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
+/* Arrows used in sorting table data */
+.angle-up {
+  display: inline-block;
+  background-image: url(../img/angle_up.svg);
+  height: 15px;
+  width: 15px;
+  border: none;
+  outline: none;
+}
+
+.angle-down {
+  display: inline-block;
+  background-image: url(../img/angle_down.svg);
+  height: 15px;
+  width: 15px;
+  border: none;
+  outline: none;
+}
+
+/* For correct positioning of sorting arrows in table head */
+.angle-position-3 {
+    position: absolute; top: 0; right:-40%;
+}
+
+.angle-position-2 {
+    position: absolute; top: 0; right:-60%;
+};
